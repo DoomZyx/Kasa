@@ -1,0 +1,154 @@
+* {
+  font-family: "Montserrat" sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+textarea,
+select,
+button {
+  font: inherit;
+  color: inherit;
+}
+
+body {
+  line-height: 1.5;
+  font-family: sans-serif;
+  background-color: #fff;
+  color: #000;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.header-logo {
+  width: 10.93vw;
+  height: 7.46vh;
+  margin-left: 6.25em;
+  margin-top: 1.25em;
+}
+
+.nav {
+  display: flex;
+  gap: 57px;
+  margin-right: 6.25em;
+  margin-top: 1.25em;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+.Banner {
+  background-image: url("../../assets/Banner.png");
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: darken;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  height: 30vh;
+  width: 85vw;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin-top: 6.25em;
+  margin-left: 7.5em;
+  color: white;
+}
+
+.Banner-title {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.card-container {
+  display: grid;
+  width: 75%;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 100px;
+  padding: 0;
+  margin-left: 15em;
+  margin-top: 6.5em;
+}
+
+.card {
+  width: 90%;
+  height: 33vh;
+  margin: 0;
+  border: none;
+  background: #ff6060;
+  border-radius: 10px;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+.card .card-cover {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.card .Card-content {
+  padding: 15px;
+  color: #fff;
+}
+.card .Card-content .Card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 15px 0;
+}/*# sourceMappingURL=style.css.map */

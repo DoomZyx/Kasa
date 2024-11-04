@@ -1,0 +1,19 @@
+// Utils
+@import "./Utils/mixins";
+@import "./Utils/variables";
+@import "./Utils/responsive";
+
+// Reset/Base
+@import "../src/Base/base.scss";
+@import "../src/Base/reset";
+
+//Composants
+@import "../src/components/Header/Header";
+@import "../src/components/Banner/Banner";
+@import "../src/components/Card/Card.scss";
+@import "../src/components/Footer/Footer";
+
+// Pages
+
+@import "../src/pages/Home";
+@import "../src/pages/About";

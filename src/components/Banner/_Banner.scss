@@ -1,0 +1,23 @@
+.Banner {
+  background-image: url("../../assets/Banner.png");
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: darken;
+  background-size: cover; 
+  background-position: center; 
+  border-radius: 10px; 
+  height: 30vh;
+  width: 85vw;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin-top: 6.25em;
+  margin-left: 7.5em;
+  color: white;
+}
+
+.Banner-title {
+  font-size: 48px;
+  font-weight: 700;
+}
