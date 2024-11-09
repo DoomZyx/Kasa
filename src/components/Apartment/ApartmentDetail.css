@@ -1,0 +1,313 @@
+@charset "UTF-8";
+.apartment-detail .carousel-image-container {
+  display: flex;
+  justify-content: center;
+}
+.apartment-detail .carousel img {
+  margin-top: 1em;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 89%;
+  height: 80vh;
+  border-radius: 10px;
+}
+.apartment-detail h1 {
+  color: #ff6060;
+  font-size: 36px;
+  font-weight: 500;
+  margin-left: 5.5vw;
+  margin-top: 1vw;
+}
+.apartment-detail .location {
+  font-size: 17px;
+  font-weight: 500;
+  margin-left: 5.5vw;
+}
+.apartment-detail .tags {
+  margin-left: 5vw;
+  margin-top: 1.8em;
+}
+.apartment-detail span,
+.apartment-detail .tag {
+  font-weight: 500;
+  border: 1px solid;
+  border-radius: 10px;
+  padding: 5px 25px 5px 25px;
+  background-color: #ff6060;
+  color: white;
+  margin-left: 0.5em;
+}
+
+.host-info {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  bottom: 7vw;
+  right: 6vw;
+  gap: 20px;
+}
+.host-info p {
+  display: flex;
+  text-align: end;
+  align-items: center;
+  width: 6vw;
+  color: #ff6060;
+  font-size: 18px;
+  font-weight: 500;
+}
+.host-info .host-picture {
+  border-radius: 100px;
+  width: 100px;
+}
+
+.rating {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  bottom: 5.5vw;
+  right: 7vw;
+}
+
+.star-rating i {
+  font-size: 34px;
+  margin-right: 10px;
+}
+
+.layout-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  position: relative;
+  bottom: 40px;
+  margin-bottom: -80px;
+}
+
+.description-section,
+.equipments-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  color: white;
+  background-color: #ff6060;
+  border: none;
+  border-radius: 10px;
+  width: 44vw;
+  margin-left: 1em;
+  padding: 1em;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+.description-section h2,
+.equipments-section h2 {
+  font-weight: 700;
+}
+
+.toggle-wrapper .arrow-icon {
+  width: 1.5em;
+  position: absolute;
+  top: 15px; /* Centre verticalement la flèche */
+  right: 10px; /* Ajustez selon vos besoins */
+  transform: translateY(-50%); /* Centrage vertical parfait */
+  color: white;
+  transition: transform 0.3s ease-in-out;
+}
+
+.arrow-icon.up {
+  transform: rotate(180deg);
+}
+
+.arrow-icon.down {
+  transform: rotate(0deg);
+}
+
+.description-section .content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.description-section.expanded .content {
+  max-height: 500px;
+  position: relative;
+  left: -1em;
+  top: 1em;
+  padding: 10px 35px 10px 10px;
+}
+
+.equipments-section .content {
+  max-height: 0;
+  overflow-y: hidden;
+  transition: max-height 0.9s ease-in-out;
+}
+
+.equipments-section.expanded .content {
+  max-height: 1000px;
+  width: 47vw;
+  position: relative;
+  left: -0.98em;
+  top: 1em;
+  padding: 10px;
+}
+
+.content {
+  background-color: #f0f0f0;
+  color: black;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 1065px) {
+  .apartment-detail .carousel img {
+    height: 100vh;
+    margin-top: 0.1em;
+  }
+  .apartment-detail h1 {
+    font-size: 30px;
+  }
+  .apartment-detail .location {
+    font-size: 19px;
+    position: relative;
+    right: -0.3vw;
+  }
+  .apartment-detail .tags {
+    position: relative;
+    right: 0px;
+  }
+  .apartment-detail .tag {
+    padding-inline: 4.5vw;
+  }
+  .apartment-detail .host-info {
+    position: relative;
+    top: 3vw;
+    left: -5vw;
+    gap: 35px;
+  }
+  .apartment-detail .host-info .host-picture {
+    width: 9vw;
+  }
+  .apartment-detail .rating {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 13vw;
+    position: relative;
+    top: -2em;
+  }
+  .apartment-detail .layout-section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 6vw;
+  }
+  .apartment-detail .toggle-wrapper {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 0px;
+  }
+  .apartment-detail .toggle-wrapper .description-section,
+  .apartment-detail .toggle-wrapper .equipments-section {
+    width: 90%;
+    position: relative;
+  }
+  .apartment-detail .description-section .arrow-icon,
+  .apartment-detail .equipments-section .arrow-icon {
+    right: 10px;
+  }
+}
+.description-section.expanded .content {
+  width: 108%;
+  position: relative;
+}
+
+.equipments-section.expanded .content {
+  width: 108%;
+}
+
+@media screen and (max-width: 768px) {
+  .apartment-detail .carousel img {
+    width: 89%;
+    height: 50vh;
+    position: relative;
+    left: 0px;
+  }
+  .apartment-detail .host-info {
+    gap: 38px;
+  }
+  .apartment-detail .host-info .host-picture {
+    width: 55px;
+  }
+  .host-info p {
+    font-size: 16px;
+  }
+  .tags {
+    flex-wrap: wrap;
+    position: relative;
+    bottom: 10px;
+  }
+  .tags .tag {
+    padding-inline: 3.9vw;
+  }
+  .rating i {
+    font-size: 30px;
+    position: relative;
+    bottom: 5px;
+  }
+}
+@media screen and (max-width: 540px) {
+  .carousel-image-container {
+    margin-top: -2.5em;
+  }
+  .apartment-detail .carousel img {
+    height: 30vh;
+    position: relative;
+  }
+  .apartment-detail h1 {
+    font-size: 23px;
+  }
+  .apartment-detail .location {
+    font-size: 15px;
+  }
+  .tags .tag {
+    padding-inline: 3vw;
+    font-size: 10px;
+  }
+  .star-rating i {
+    font-size: 22px;
+  }
+  .apartment-detail .layout-section {
+    gap: 20px;
+    margin-bottom: -8em;
+    margin-right: 1em;
+  }
+  .apartment-detail .host-info {
+    gap: 38px;
+    margin-bottom: 1em;
+  }
+  .apartment-detail .host-info p {
+    font-size: 13px;
+  }
+  .apartment-detail .host-info .host-picture {
+    width: 40px;
+    height: 40px;
+  }
+  .toggle-wrapper .description-section .arrow-icon,
+  .toggle-wrapper .equipments-section .arrow-icon {
+    margin-top: -0.4em;
+    font-size: 12px;
+  }
+  .toggle-wrapper .description-section,
+  .toggle-wrapper .equipments-section {
+    padding: 8px;
+  }
+  .description-section.expanded .content {
+    width: 108%;
+    padding: 10px;
+  }
+  .equipments-section.expanded .content {
+    width: 109%;
+  }
+}/*# sourceMappingURL=ApartmentDetail.css.map */

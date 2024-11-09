@@ -1,6 +1,20 @@
-* {
-  font-family: "Montserrat" sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+div,
+span {
+  font-family: "Montserrat", sans-serif !important;
+  box-sizing: border-box;
 }
+
 
 a {
   text-decoration: none;

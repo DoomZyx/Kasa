@@ -1,0 +1,24 @@
+@import "../../Utils/responsive";
+
+.Banner-about {
+ background-image: url("../../assets/BannerAbout.png");
+ box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+ background-color: rgba(0, 0, 0, 0.5);
+ background-blend-mode: darken;
+ background-size: cover; 
+ background-position: center; 
+ border-radius: 10px; 
+ height: 30vh;
+ width: 85vw;
+ display: flex;
+ justify-content: center;
+ text-align: center;
+ align-items: center;
+ margin: auto;
+}
+
+@include mobile {
+  .Banner-about {
+   height: 20vh;
+  }
+}

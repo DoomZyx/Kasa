@@ -1,5 +1,18 @@
-* {
-  font-family: "Montserrat" sans-serif;
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+div,
+span {
+  font-family: "Montserrat", sans-serif !important;
+  box-sizing: border-box;
 }
 
 a {
@@ -43,11 +56,6 @@ button {
   font: inherit;
 }
 
-img {
-  max-width: 100%;
-  display: block;
-}
-
 input,
 textarea,
 select,
@@ -67,31 +75,160 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  width: 100%;
+  padding-bottom: 50px;
 }
 
 .header-logo {
-  width: 10.93vw;
-  height: 7.46vh;
-  margin-left: 6.25em;
-  margin-top: 1.25em;
+  margin-left: 100px;
+  margin-top: 50px;
+}
+.header-logo img {
+  width: 250px;
+  height: 80px;
 }
 
 .nav {
+  width: 100%;
   display: flex;
+  justify-content: flex-end;
   gap: 57px;
-  margin-right: 6.25em;
-  margin-top: 1.25em;
   font-size: 24px;
   font-weight: 500;
+  position: relative;
+  top: 15px;
+  right: 130px;
 }
 
 .nav a:hover {
   text-decoration: underline;
 }
 
+@media screen and (max-width: 1065px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+  }
+  .header img {
+    width: 250px;
+    height: 90px;
+    position: relative;
+    right: 50px;
+  }
+  nav {
+    position: relative;
+    left: -2.8em;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header-logo img {
+    width: 30vw;
+    height: 80px;
+    margin-top: -20px;
+  }
+  nav a {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 540px) {
+  .header-logo img {
+    width: 35vw;
+    height: 7vh;
+    position: relative;
+    right: 80px;
+  }
+  .nav {
+    gap: 20px;
+    position: relative;
+    left: -1.2em;
+  }
+  .nav a {
+    font-size: 15px;
+  }
+}
+.Banner-pos {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 .Banner {
   background-image: url("../../assets/Banner.png");
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: darken;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  height: 250px;
+  width: 88%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.Banner-title {
+  font-size: 48px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.Banner-title .responsive-break {
+  display: inline; /* Par défaut, le texte est en ligne */
+}
+
+@media screen and (max-width: 1065px) {
+  .Banner-pos {
+    justify-content: center;
+    width: 100%; /* Assurez-vous que la largeur est à 100% */
+    margin: 0; /* Supprimez les marges externes si nécessaire */
+  }
+}
+
+@media screen and (max-width: 1065px) {
+  .Banner-pos {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centrage vertical si nécessaire */
+    width: 100%; /* Assurez-vous que le conteneur parent prend toute la largeur */
+    position: relative;
+    top: 30px;
+  }
+  .Banner {
+    padding: 0; /* Supprime le padding externe si nécessaire */
+    display: flex;
+    justify-content: center; /* Centre le contenu horizontalement */
+    align-items: center; /* Centre le contenu verticalement */
+  }
+  .Banner-title {
+    white-space: normal;
+    word-break: break-word;
+    width: 90%;
+    font-size: 40px; /* Ajuste la taille du texte pour les petites résolutions */
+    text-align: start; /* Centrer le texte si besoin */
+  }
+  .Banner-title .responsive-break {
+    display: block; /* Passe le texte à la ligne suivante en mode responsive */
+  }
+}
+@media screen and (max-width: 768px) {
+  .Banner-pos {
+    margin-bottom: -2em;
+    margin-top: -3em;
+  }
+}
+@media screen and (max-width: 540px) {
+  .Banner {
+    height: 20vh;
+  }
+  .Banner .Banner-title {
+    font-size: 24px;
+  }
+}
+.Banner-about {
+  background-image: url("../../assets/BannerAbout.png");
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   background-color: rgba(0, 0, 0, 0.5);
   background-blend-mode: darken;
@@ -104,51 +241,630 @@ body {
   justify-content: center;
   text-align: center;
   align-items: center;
-  margin-top: 6.25em;
-  margin-left: 7.5em;
-  color: white;
+  margin: auto;
 }
 
-.Banner-title {
-  font-size: 48px;
-  font-weight: 700;
+@media screen and (max-width: 540px) {
+  .Banner-about {
+    height: 20vh;
+  }
 }
-
 .card-container {
   display: grid;
-  width: 75%;
   grid-template-columns: repeat(3, 1fr);
-  gap: 100px;
-  padding: 0;
-  margin-left: 15em;
-  margin-top: 6.5em;
+  width: 100%;
+  gap: 70px;
+  max-width: 1500px;
+  margin: 0 auto;
+  position: relative;
+  padding-left: 50px;
+  padding-bottom: 60px;
+  top: 80px;
 }
 
 .card {
+  position: relative;
   width: 90%;
-  height: 33vh;
-  margin: 0;
+  height: 40vh;
   border: none;
-  background: #ff6060;
   border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0.25px 0.25px 0.25px 0.25px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s;
 }
 .card:hover {
   transform: scale(1.05);
 }
-.card .card-cover {
+
+.card-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   width: 100%;
-  height: 200px;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
+.card-cover {
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-radius: 10px;
 }
-.card .Card-content {
-  padding: 15px;
+
+.Card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
   color: #fff;
 }
-.card .Card-content .Card-title {
+
+.Card-title {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   font-size: 18px;
   font-weight: bold;
-  margin: 15px 0;
+}
+
+@media screen and (max-width: 1065px) {
+  .card-container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
+  .card-container .card {
+    width: 93%;
+    height: 80vh;
+    margin-right: 50px;
+  }
+  .card-container .Card-content {
+    padding: 40px;
+  }
+  .card-container .Card-title {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .card-container .card {
+    width: 95%;
+    height: 40vh;
+  }
+  .card-container .card .Card-title {
+    font-size: 32px;
+    position: relative;
+    right: 10px;
+    top: 20px;
+  }
+}
+@media screen and (max-width: 540px) {
+  .card-container .card {
+    width: 95%;
+    height: 35vh;
+  }
+  .card-container .card .Card-title {
+    font-size: 18px;
+    position: relative;
+    right: 1.5em;
+  }
+}
+.carousel {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%; /* Ajustez selon vos besoins */
+}
+
+.carousel-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.carousel img {
+  max-width: 100%;
+  max-height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+}
+
+.carousel-btn {
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  position: absolute;
+  top: 45%;
+  padding: 10px;
+  z-index: 1;
+}
+
+.carousel svg {
+  width: 3vw;
+}
+
+.carousel-btn.left {
+  left: 7%;
+}
+
+.carousel-btn.right {
+  right: 6%;
+}
+
+.carousel-btn:hover {
+  transform: scale(1.1);
+}
+
+.apartment-detail .carousel-image-container {
+  display: flex;
+  justify-content: center;
+}
+.apartment-detail .carousel img {
+  margin-top: 1em;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 89%;
+  height: 80vh;
+  border-radius: 10px;
+}
+.apartment-detail h1 {
+  color: #ff6060;
+  font-size: 36px;
+  font-weight: 500;
+  margin-left: 5.5vw;
+  margin-top: 1vw;
+}
+.apartment-detail .location {
+  font-size: 17px;
+  font-weight: 500;
+  margin-left: 5.5vw;
+}
+.apartment-detail .tags {
+  margin-left: 5vw;
+  margin-top: 1.8em;
+}
+.apartment-detail span,
+.apartment-detail .tag {
+  font-weight: 500;
+  border: 1px solid;
+  border-radius: 10px;
+  padding: 5px 25px 5px 25px;
+  background-color: #ff6060;
+  color: white;
+  margin-left: 0.5em;
+}
+
+.host-info {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  bottom: 7vw;
+  right: 6vw;
+  gap: 10px;
+}
+.host-info p {
+  display: flex;
+  text-align: end;
+  align-items: center;
+  width: 6vw;
+  color: #ff6060;
+  font-size: 18px;
+  font-weight: 500;
+}
+.host-info .host-picture {
+  border-radius: 100px;
+  width: 100px;
+}
+
+.rating {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  bottom: 5.5vw;
+  right: 7vw;
+}
+
+.star-rating i {
+  font-size: 34px;
+  margin-right: 10px;
+}
+
+.layout-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  position: relative;
+  bottom: 40px;
+  margin-bottom: -80px;
+}
+
+.description-section,
+.equipments-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  color: white;
+  background-color: #ff6060;
+  border: none;
+  border-radius: 10px;
+  width: 44vw;
+  margin-left: 1em;
+  padding: 1em;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+.description-section h2,
+.equipments-section h2 {
+  font-weight: 700;
+}
+
+.toggle-wrapper .arrow-icon {
+  width: 1.5em;
+  position: absolute;
+  top: 15px; /* Centre verticalement la flèche */
+  right: 10px; /* Ajustez selon vos besoins */
+  transform: translateY(-50%); /* Centrage vertical parfait */
+  color: white;
+  transition: transform 0.3s ease-in-out;
+}
+
+.arrow-icon.up {
+  transform: rotate(180deg);
+}
+
+.arrow-icon.down {
+  transform: rotate(0deg);
+}
+
+.description-section .content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.description-section.expanded .content {
+  max-height: 500px;
+  position: relative;
+  left: -1em;
+  top: 1em;
+  padding: 10px 35px 10px 10px;
+}
+
+.equipments-section .content {
+  max-height: 0;
+  overflow-y: hidden;
+  transition: max-height 0.9s ease-in-out;
+}
+
+.equipments-section.expanded .content {
+  max-height: 1000px;
+  width: 47vw;
+  position: relative;
+  left: -0.98em;
+  top: 1em;
+  padding: 10px;
+}
+
+.content {
+  background-color: #f0f0f0;
+  color: black;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 1065px) {
+  .apartment-detail .carousel img {
+    height: 100vh;
+    margin-top: 0.1em;
+  }
+  .apartment-detail h1 {
+    font-size: 30px;
+  }
+  .apartment-detail .location {
+    font-size: 19px;
+    position: relative;
+    right: -0.3vw;
+  }
+  .apartment-detail .tags {
+    position: relative;
+    right: 0px;
+  }
+  .apartment-detail .tag {
+    padding-inline: 4.5vw;
+  }
+  .apartment-detail .host-info {
+    position: relative;
+    top: 3vw;
+    left: -5vw;
+    gap: 15px;
+  }
+  .apartment-detail .host-info .host-picture {
+    width: 9vw;
+  }
+  .apartment-detail .rating {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 13vw;
+    position: relative;
+    top: -2em;
+  }
+  .apartment-detail .layout-section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 6vw;
+  }
+  .apartment-detail .toggle-wrapper {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 0px;
+  }
+  .apartment-detail .toggle-wrapper .description-section,
+  .apartment-detail .toggle-wrapper .equipments-section {
+    width: 90%;
+    position: relative;
+  }
+  .apartment-detail .description-section .arrow-icon,
+  .apartment-detail .equipments-section .arrow-icon {
+    right: 10px;
+  }
+}
+.description-section.expanded .content {
+  width: 108%;
+  position: relative;
+}
+
+.equipments-section.expanded .content {
+  width: 108%;
+}
+
+@media screen and (max-width: 768px) {
+  .apartment-detail .carousel img {
+    width: 89%;
+    height: 50vh;
+    position: relative;
+    left: 0px;
+  }
+  .apartment-detail .host-info {
+    gap: 15px;
+  }
+  .apartment-detail .host-info .host-picture {
+    width: 55px;
+  }
+  .host-info p {
+    font-size: 16px;
+  }
+  .tags {
+    flex-wrap: wrap;
+    position: relative;
+    bottom: 10px;
+  }
+  .tags .tag {
+    padding-inline: 3.9vw;
+  }
+  .rating i {
+    font-size: 30px;
+    position: relative;
+    bottom: 5px;
+  }
+}
+@media screen and (max-width: 540px) {
+  .carousel-image-container {
+    margin-top: -2.5em;
+  }
+  .apartment-detail .carousel img {
+    height: 30vh;
+    position: relative;
+  }
+  .apartment-detail h1 {
+    font-size: 23px;
+  }
+  .apartment-detail .location {
+    font-size: 15px;
+  }
+  .tags .tag {
+    padding-inline: 3vw;
+    font-size: 10px;
+  }
+  .star-rating i {
+    font-size: 22px;
+  }
+  .apartment-detail .layout-section {
+    gap: 20px;
+    margin-bottom: -8em;
+    margin-right: 1em;
+  }
+  .apartment-detail .host-info {
+    gap: 20px;
+    margin-bottom: 1em;
+  }
+  .apartment-detail .host-info p {
+    font-size: 13px;
+  }
+  .apartment-detail .host-info .host-picture {
+    width: 40px;
+    height: 40px;
+  }
+  .toggle-wrapper .description-section .arrow-icon,
+  .toggle-wrapper .equipments-section .arrow-icon {
+    margin-top: -0.4em;
+    font-size: 12px;
+  }
+  .toggle-wrapper .description-section,
+  .toggle-wrapper .equipments-section {
+    padding: 8px;
+  }
+  .description-section.expanded .content {
+    width: 108%;
+    padding: 10px;
+  }
+  .equipments-section.expanded .content {
+    width: 109%;
+  }
+}
+.Footer {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  height: 25vh;
+  margin-top: 120px;
+  background-color: black;
+}
+.Footer img {
+  position: relative;
+  left: 125px;
+  bottom: 30px;
+}
+.Footer h3 {
+  color: white;
+  position: relative;
+  right: 60px;
+  top: 50px;
+}
+
+@media screen and (max-width: 1065px) {
+  .Footer {
+    height: 40vh;
+  }
+}
+.sections-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  margin: 5em;
+  gap: 30px;
+}
+
+.sections {
+  border-radius: 10px;
+  margin-bottom: 1em;
+  padding: 1em;
+  cursor: pointer;
+  color: white;
+  transition: all 0.3s ease-in-out;
+  background-color: #ff6060;
+  width: 75vw;
+}
+
+.sections-list h2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.sections-list .arrow {
+  transition: transform 0.3s ease-in-out;
+}
+
+.sections-list svg {
+  width: 24px;
+}
+
+.sections-list .arrow.up {
+  transform: rotate(-180deg);
+}
+
+.sections-list .arrow.down {
+  transform: rotate(0deg);
+}
+
+.sections-list .content {
+  background-color: white;
+  color: black;
+  margin-top: 0.5em;
+  padding: 1em;
+  width: 75vw;
+  height: 15vh;
+  position: relative;
+  top: 1em;
+  right: 1em;
+}
+
+.content p {
+  margin-top: 1em;
+}
+
+@media screen and (max-width: 540px) {
+  .sections-list {
+    display: flex;
+    align-self: center;
+    align-items: center;
+    margin-top: 2em;
+    margin-bottom: -5em;
+    gap: 15px;
+  }
+  .sections {
+    margin-bottom: 1em;
+    padding: 0.5em;
+    cursor: pointer;
+    color: white;
+    width: 85vw;
+    height: auto;
+  }
+  .sections-list h2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+    font-size: 16px;
+  }
+  .sections-list svg {
+    width: 18px;
+  }
+  .sections-list .content {
+    background-color: white;
+    color: black;
+    margin-top: 0.5em;
+    padding: 0.5em;
+    width: 85vw;
+    height: auto;
+    position: relative;
+    top: 1em;
+    right: 0.5em;
+  }
+}
+.error-404 {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.error-404 h1 {
+  font-size: 12rem;
+  font-weight: 800;
+  color: #ff6060;
+}
+
+.error-404 p {
+  font-size: 1.5rem;
+  margin: 20px 0;
+  color: #ff6060;
+  padding-bottom: 1.3rem;
+}
+
+.home-link {
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.home-link:hover {
+  text-decoration: underline;
 }/*# sourceMappingURL=style.css.map */

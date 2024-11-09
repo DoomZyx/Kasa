@@ -1,7 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Home from "./pages/Home.js";
-import About from "./pages/About.js";
+import Home from "./pages/Home.jsx";
+import ApartmentDetail from './components/ApartmentDetail'; 
+import About from "./pages/About.jsx";
 
 function AppRouter() {
   return (
@@ -11,6 +12,7 @@ function AppRouter() {
       </nav>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/apartment/:id" element={<ApartmentDetail />} />
         <Route path="/About" element={<About />} />
       </Routes>
     </Router>

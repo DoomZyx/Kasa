@@ -1,23 +1,88 @@
+@import "../../Utils/responsive.scss";
+
+.Banner-pos {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 .Banner {
   background-image: url("../../assets/Banner.png");
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   background-color: rgba(0, 0, 0, 0.5);
   background-blend-mode: darken;
-  background-size: cover; 
-  background-position: center; 
-  border-radius: 10px; 
-  height: 30vh;
-  width: 85vw;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  height: 250px;
+  width: 88%;
   display: flex;
   justify-content: center;
-  text-align: center;
   align-items: center;
-  margin-top: 6.25em;
-  margin-left: 7.5em;
   color: white;
+  text-align: center;
 }
 
 .Banner-title {
   font-size: 48px;
   font-weight: 700;
+  white-space: nowrap;
+}
+
+.Banner-title .responsive-break {
+  display: inline; /* Par défaut, le texte est en ligne */
+}
+
+.Banner-pos {
+  @include desktop {
+    justify-content: center;
+    width: 100%; /* Assurez-vous que la largeur est à 100% */
+    margin: 0; /* Supprimez les marges externes si nécessaire */
+  }
+}
+
+@include desktop {
+  .Banner-pos {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centrage vertical si nécessaire */
+    width: 100%; /* Assurez-vous que le conteneur parent prend toute la largeur */
+    position: relative;
+    top: 30px;
+  }
+
+  .Banner {
+    padding: 0; /* Supprime le padding externe si nécessaire */
+    display: flex;
+    justify-content: center; /* Centre le contenu horizontalement */
+    align-items: center; /* Centre le contenu verticalement */
+  }
+
+  .Banner-title {
+    white-space: normal;
+    word-break: break-word;
+    width: 90%;
+    font-size: 40px; /* Ajuste la taille du texte pour les petites résolutions */
+    text-align: start; /* Centrer le texte si besoin */
+  }
+
+  .Banner-title .responsive-break {
+    display: block; /* Passe le texte à la ligne suivante en mode responsive */
+  }
+}
+
+@include tablet {
+  .Banner-pos {
+    margin-bottom: -2em;
+    margin-top: -3em;
+  }
+}
+
+@include mobile {
+  .Banner {
+    height: 20vh;
+      & .Banner-title {
+        font-size: 24px;
+      }
+  }
 }

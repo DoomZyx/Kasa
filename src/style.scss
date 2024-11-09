@@ -1,19 +1,22 @@
 // Utils
-@import "./Utils/mixins";
-@import "./Utils/variables";
-@import "./Utils/responsive";
+@use "./Utils/mixins.scss";
+@use "./Utils/variables.scss";
+@use "./Utils/responsive.scss";
 
 // Reset/Base
-@import "../src/Base/base.scss";
-@import "../src/Base/reset";
+@use "./Base/base.scss";
+@use "./Base/reset";
 
-//Composants
-@import "../src/components/Header/Header";
-@import "../src/components/Banner/Banner";
-@import "../src/components/Card/Card.scss";
-@import "../src/components/Footer/Footer";
+//composants
+@use "./components/Header/Header.scss";
+@use "./components/Banner/Banner.scss";
+@use "./components/Banner/Banner-about";
+@use "./components/Card/Card.scss";
+@use "./components/Carousel/Carousel.scss";
+@use "./components/Apartment/ApartmentDetail.scss";
+@use "./components/Footer/Footer.scss";
+@use "./components/About/About.scss";
 
 // Pages
 
-@import "../src/pages/Home";
-@import "../src/pages/About";
+@use "./pages/ERR404/Error404.scss";
