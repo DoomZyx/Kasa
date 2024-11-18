@@ -39,8 +39,8 @@
     justify-content: space-between;
   }
   .header img {
-    width: 250px;
-    height: 90px;
+    width: 220px;
+    height: 70px;
     position: relative;
     right: 50px;
   }
@@ -53,9 +53,10 @@
 
 @include tablet {
   .header-logo img {
-    width: 30vw;
-    height: 80px;
+    width: 25vw;
+    height: 70px;
     margin-top: -20px;
+    margin-bottom: 15px;
   }
 
   nav a {
@@ -66,7 +67,7 @@
 @include mobile {
   .header-logo img {
     width: 35vw;
-    height: 7vh;
+    height: 8vh;
     position: relative;
     right: 80px;
   }
@@ -75,6 +76,7 @@
     gap: 20px;
     position: relative;
     left: -1.2em;
+    margin-bottom: 0.7em;
 
     & a {
       font-size: 15px;

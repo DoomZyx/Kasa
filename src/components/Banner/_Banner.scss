@@ -30,14 +30,14 @@
 }
 
 .Banner-title .responsive-break {
-  display: inline; /* Par défaut, le texte est en ligne */
+  display: inline; 
 }
 
 .Banner-pos {
   @include desktop {
     justify-content: center;
-    width: 100%; /* Assurez-vous que la largeur est à 100% */
-    margin: 0; /* Supprimez les marges externes si nécessaire */
+    width: 100%; 
+    margin: 0; 
   }
 }
 
@@ -45,42 +45,48 @@
   .Banner-pos {
     display: flex;
     justify-content: center;
-    align-items: center; /* Centrage vertical si nécessaire */
-    width: 100%; /* Assurez-vous que le conteneur parent prend toute la largeur */
-    position: relative;
-    top: 30px;
+    align-items: center;
+    width: 100%; 
+    margin-bottom: -3em;
   }
 
   .Banner {
-    padding: 0; /* Supprime le padding externe si nécessaire */
+    padding: 0; 
     display: flex;
-    justify-content: center; /* Centre le contenu horizontalement */
-    align-items: center; /* Centre le contenu verticalement */
+    justify-content: center; 
+    align-items: center; 
+    height: 32vh;
   }
 
   .Banner-title {
-    white-space: normal;
-    word-break: break-word;
     width: 90%;
-    font-size: 40px; /* Ajuste la taille du texte pour les petites résolutions */
-    text-align: start; /* Centrer le texte si besoin */
-  }
-
-  .Banner-title .responsive-break {
-    display: block; /* Passe le texte à la ligne suivante en mode responsive */
+    font-size: 40px; 
+    text-align: center; 
   }
 }
 
 @include tablet {
+
+  .Banner {
+    height: 20vh;
+  }
+
   .Banner-pos {
-    margin-bottom: -2em;
     margin-top: -3em;
+  } 
+   .Banner-title {
+    white-space: normal;
+    word-break: break-word;
+    text-align: start;
+  }
+  .Banner-title .responsive-break {
+    display: block;
   }
 }
 
 @include mobile {
   .Banner {
-    height: 20vh;
+    height: 15vh;
       & .Banner-title {
         font-size: 24px;
       }
