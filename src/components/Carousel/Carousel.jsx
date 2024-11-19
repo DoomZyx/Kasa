@@ -1,14 +1,23 @@
-import React, { useState } from "react";
-import "./Carousel.scss"; // Assurez-vous de créer un fichier CSS pour le style
+import React, { useState, useEffect } from "react";
+import "./Carousel.scss"; 
+
 
 const Carousel = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  
+  // Charge l'image suivante 
+  useEffect(() => {
+    const preloadImage = new Image();
+    preloadImage.src = images[(currentIndex + 1) % images.length];
+  }, [currentIndex]);
+
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex === images.length - 1 ? 0 : prevIndex + 1
     );
   };
+
 
   const handlePrev = () => {
     setCurrentIndex((prevIndex) =>
@@ -28,6 +37,9 @@ const Carousel = ({ images }) => {
       </button>
       <div className="carousel-image-container">
         <img src={images[currentIndex]} alt={`Slide ${currentIndex + 1}`} />
+        <div className="Counter">
+          {currentIndex + 1} / {images.length}
+        </div>
       </div>
       <button className="carousel-btn right" onClick={handleNext}>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">

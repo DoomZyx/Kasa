@@ -2,7 +2,8 @@
   display: flex;
   align-items: center;
   position: relative;
-  width: 100%; /* Ajustez selon vos besoins */
+  width: 100%;
+  position: relative;
 }
 
 .carousel-image-container {
@@ -45,4 +46,22 @@
 
 .carousel-btn:hover {
   transform: scale(1.1);
+}
+
+.Counter {
+  position: absolute;
+  bottom: 30px;
+  right: 915px;
+  color: #ffffff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 540px) {
+  .carousel-btn {
+    bottom: 100px;
+    margin-top: -1.5em;
+  }
 }/*# sourceMappingURL=Carousel.css.map */

@@ -1,3 +1,5 @@
+import "../ToggleSection/_ToggleSection.scss";
+
 const ToggleSection = ({
   className,
   title,

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../About/_About.scss";
 
+
 const SectionsList = ({ sections }) => {
   const [openSections, setOpenSections] = useState([]);
 

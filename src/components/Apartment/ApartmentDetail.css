@@ -1,5 +1,5 @@
-@charset "UTF-8";
 .apartment-detail .carousel-image-container {
+  overflow: hidden;
   display: flex;
   justify-content: center;
 }
@@ -26,6 +26,7 @@
 .apartment-detail .tags {
   margin-left: 5vw;
   margin-top: 1.8em;
+  white-space: nowrap;
 }
 .apartment-detail span,
 .apartment-detail .tag {
@@ -80,83 +81,7 @@
   flex-direction: row;
   position: relative;
   bottom: 40px;
-  margin-bottom: -80px;
-}
-
-.description-section,
-.equipments-section {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: flex-start;
-  color: white;
-  background-color: #ff6060;
-  border: none;
-  border-radius: 10px;
-  width: 44vw;
-  margin-left: 1em;
-  padding: 1em;
-  overflow: hidden;
-  cursor: pointer;
-  position: relative;
-}
-.description-section h2,
-.equipments-section h2 {
-  font-weight: 700;
-}
-
-.toggle-wrapper .arrow-icon {
-  width: 1.5em;
-  position: absolute;
-  top: 15px; /* Centre verticalement la flèche */
-  right: 10px; /* Ajustez selon vos besoins */
-  transform: translateY(-50%); /* Centrage vertical parfait */
-  color: white;
-  transition: transform 0.3s ease-in-out;
-}
-
-.arrow-icon.up {
-  transform: rotate(180deg);
-}
-
-.arrow-icon.down {
-  transform: rotate(0deg);
-}
-
-.description-section .content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease-in-out;
-}
-
-.description-section.expanded .content {
-  max-height: 500px;
-  position: relative;
-  left: -1em;
-  top: 1em;
-  padding: 10px 35px 10px 10px;
-}
-
-.equipments-section .content {
-  max-height: 0;
-  overflow-y: hidden;
-  transition: max-height 0.9s ease-in-out;
-}
-
-.equipments-section.expanded .content {
-  max-height: 1000px;
-  width: 47vw;
-  position: relative;
-  left: -0.98em;
-  top: 1em;
-  padding: 10px;
-}
-
-.content {
-  background-color: #f0f0f0;
-  color: black;
-  margin: 0;
-  padding: 0;
+  margin-bottom: -120px;
 }
 
 @media screen and (max-width: 1065px) {
@@ -177,7 +102,7 @@
     right: 0px;
   }
   .apartment-detail .tag {
-    padding-inline: 4.5vw;
+    padding-inline: 3vw;
   }
   .apartment-detail .host-info {
     position: relative;
@@ -202,37 +127,16 @@
     gap: 40px;
     margin-top: 6vw;
   }
-  .apartment-detail .toggle-wrapper {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    top: 0px;
-  }
-  .apartment-detail .toggle-wrapper .description-section,
-  .apartment-detail .toggle-wrapper .equipments-section {
-    width: 90%;
-    position: relative;
-  }
-  .apartment-detail .description-section .arrow-icon,
-  .apartment-detail .equipments-section .arrow-icon {
-    right: 10px;
-  }
 }
-.description-section.expanded .content {
-  width: 108%;
-  position: relative;
-}
-
-.equipments-section.expanded .content {
-  width: 108%;
-}
-
 @media screen and (max-width: 768px) {
   .apartment-detail .carousel img {
     width: 89%;
     height: 50vh;
     position: relative;
     left: 0px;
+  }
+  .location {
+    width: 88%;
   }
   .apartment-detail .host-info {
     gap: 38px;
@@ -244,12 +148,14 @@
     font-size: 16px;
   }
   .tags {
+    width: 88%;
     flex-wrap: wrap;
     position: relative;
     bottom: 10px;
   }
   .tags .tag {
-    padding-inline: 3.9vw;
+    padding-inline: 2vw;
+    font-size: 12px;
   }
   .rating i {
     font-size: 30px;
@@ -260,19 +166,25 @@
 @media screen and (max-width: 540px) {
   .carousel-image-container {
     margin-top: -2.5em;
+    width: 10px;
   }
   .apartment-detail .carousel img {
     height: 30vh;
     position: relative;
   }
   .apartment-detail h1 {
+    width: 88%;
     font-size: 23px;
   }
   .apartment-detail .location {
+    width: 88%;
     font-size: 15px;
   }
+  .tags {
+    width: 88%;
+  }
   .tags .tag {
-    padding-inline: 3vw;
+    padding-inline: 1.3vw;
     font-size: 10px;
   }
   .star-rating i {
@@ -293,21 +205,5 @@
   .apartment-detail .host-info .host-picture {
     width: 40px;
     height: 40px;
-  }
-  .toggle-wrapper .description-section .arrow-icon,
-  .toggle-wrapper .equipments-section .arrow-icon {
-    margin-top: -0.4em;
-    font-size: 12px;
-  }
-  .toggle-wrapper .description-section,
-  .toggle-wrapper .equipments-section {
-    padding: 8px;
-  }
-  .description-section.expanded .content {
-    width: 108%;
-    padding: 10px;
-  }
-  .equipments-section.expanded .content {
-    width: 109%;
   }
 }/*# sourceMappingURL=ApartmentDetail.css.map */

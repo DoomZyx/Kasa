@@ -48,7 +48,7 @@ function ApartmentDetail() {
         <div className="layout-section">
           <div className="toggle-wrapper">
             <ToggleSection
-              className={`description-section ${
+              className={`section ${
                 showDescription ? "expanded" : ""
               }`}
               title="Description"
