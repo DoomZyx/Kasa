@@ -1,3 +1,6 @@
+@import "../../Utils/responsive.scss";
+
+
 .error-404 {
   text-align: center;
   margin-top: 100px;
@@ -23,4 +26,23 @@
 
 .home-link:hover {
   text-decoration: underline;
+}
+
+@include mobile {
+
+  .error-404 {
+    margin-top: 0px;
+  }
+
+  .error-404 h1 {
+    font-size: 6em;
+  }
+
+  .error-404 p {
+    font-size: 1em;
+  }
+
+  .home-link {
+    font-size: 1em;
+  }
 }

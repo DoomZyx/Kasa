@@ -1,109 +1,106 @@
 @import "../../Utils/responsive.scss";
-
+@import "../../Utils/mixins";
+@import "../../Utils/variables";
 
 .apartment-detail {
   & .carousel-image-container {
+    @include flex-JCenter;
     overflow: hidden;
-    display: flex;
-    justify-content: center;
   }
 
   & .carousel img {
     margin-top: 1em;
     object-fit: cover;
-    width: 89%;
-    height: 80vh;
+    width: $carousel-img-width;
+    height: $carousel-img-height;
     border-radius: 10px;
   }
+
   & h1 {
-    color: #ff6060;
-    font-size: 36px;
+    color: $primary-color;
+    font-size: $apartment-title-font-size;
     font-weight: 500;
     margin-left: 5.5vw;
     margin-top: 1vw;
   }
+
   & .location {
-    font-size: 17px;
+    font-size: $location-font-size;
     font-weight: 500;
     margin-left: 5.5vw;
   }
+
   .tags {
     margin-left: 5vw;
     margin-top: 1.8em;
     white-space: nowrap;
   }
+
   & span,
   .tag {
     font-weight: 500;
     border: 1px solid;
     border-radius: 10px;
-    padding: 5px 25px 5px 25px;
-    background-color: #ff6060;
+    padding: $tag-padding;
+    background-color: $primary-color;
     color: white;
     margin-left: 0.5em;
   }
 }
 
 .host-info {
-  display: flex;
-  justify-content: flex-end;
+  @include flex-end;
   position: relative;
   bottom: 7vw;
   right: 6vw;
-  gap: 20px;
+  gap: $host-info-gap;
 
   & p {
-    display: flex;
-    text-align: end;
-    align-items: center;
+    @include flex-end-Hcenter-textEnd;
     width: 6vw;
-    color: #ff6060;
-    font-size: 18px;
+    color: $primary-color;
+    font-size: $host-font-size;
     font-weight: 500;
   }
+
   & .host-picture {
     border-radius: 100px;
-    width: 100px;
+    width: $host-picture-width;
   }
 }
 
 .rating {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  @include flex-end-Hcenter;
   position: relative;
   bottom: 5.5vw;
   right: 7vw;
 }
 
 .star-rating i {
-  font-size: 34px;
+  font-size: $star-font-size;
   margin-right: 10px;
 }
 
 .layout-section {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
+  @include rowCenter;
   position: relative;
   bottom: 40px;
-  margin-bottom: -120px;
+  margin-bottom: $layout-margin-bottom;
 }
-
 
 @include desktop {
   .apartment-detail {
     & .carousel img {
-      height: 100vh;
+      height: $carousel-img-height-desktop;
       margin-top: 0.1em;
     }
 
     & h1 {
-      font-size: 30px;
+      font-size: $apartment-title-font-size-desktop;
     }
 
     & .location {
-      font-size: 19px;
+      font-size: $location-font-size-desktop;
       position: relative;
       right: -0.3vw;
     }
@@ -114,33 +111,30 @@
     }
 
     .tag {
-      padding-inline: 3vw;
+      padding-inline: $tag-padding-desktop;
     }
 
     .host-info {
       position: relative;
-      top: 3vw;
-      left: -5vw;
-      gap: 35px;
+      top: $host-info-top-desktop;
+      left: $host-info-left-desktop;
+      gap: $host-info-gap-desktop;
 
       & .host-picture {
-        width: 9vw;
+        width: $host-picture-width-desktop;
       }
     }
 
     .rating {
-      display: flex;
-      justify-content: flex-start;
+      @include flex-start;
       margin-left: 13vw;
       position: relative;
-      top: -2em;
+      top: $rating-top-desktop;
     }
 
     .layout-section {
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      gap: 40px;
+      @include columnCenter;
+      gap: $layout-gap-desktop;
       margin-top: 6vw;
     }
   }
@@ -148,8 +142,8 @@
 
 @include tablet {
   .apartment-detail .carousel img {
-    width: 89%;
-    height: 50vh;
+    width: $carousel-img-width;
+    height: $carousel-img-height-tablet;
     position: relative;
     left: 0px;
   }
@@ -159,14 +153,15 @@
   }
 
   .apartment-detail .host-info {
-    gap: 38px;
+    gap: $host-info-gap-tablet;
+
     & .host-picture {
-      width: 55px;
+      width: $host-picture-width-tablet;
     }
   }
 
   .host-info p {
-    font-size: 16px;
+    font-size: $host-font-size-tablet;
   }
 
   .tags {
@@ -176,20 +171,19 @@
     bottom: 10px;
 
     & .tag {
-      padding-inline: 2vw;
-      font-size: 12px;
+      padding-inline: $tag-padding-tablet;
+      font-size: $tag-font-size-tablet;
     }
   }
 
   .rating i {
-    font-size: 30px;
+    font-size: $star-font-size-tablet;
     position: relative;
     bottom: 5px;
   }
 }
 
 @include mobile {
-
   .carousel-image-container {
     margin-top: -2.5em;
     width: 10px;
@@ -197,49 +191,51 @@
 
   .apartment-detail {
     & .carousel img {
-      height: 30vh;
+      height: $carousel-img-height-mobile;
       position: relative;
     }
   }
 
   .apartment-detail h1 {
     width: 88%;
-    font-size: 23px;
+    font-size: $apartment-title-font-size-mobile;
   }
+
   .apartment-detail .location {
     width: 88%;
-    font-size: 15px;
+    font-size: $location-font-size-mobile;
   }
 
   .tags {
     width: 88%;
-  }
 
-  .tags .tag {
-    padding-inline: 1.3vw;
-    font-size: 10px;
+    .tag {
+      padding-inline: $tag-padding-mobile;
+      font-size: $tag-font-size-mobile;
+    }
   }
 
   .star-rating i {
-    font-size: 22px;
+    font-size: $star-font-size-mobile;
   }
 
   .apartment-detail .layout-section {
-    gap: 20px;
+    gap: $layout-gap-mobile;
     margin-bottom: -8em;
     margin-right: 1em;
   }
 
   .apartment-detail .host-info {
-    gap: 38px;
+    gap: $host-info-gap-tablet;
     margin-bottom: 1em;
+
     & p {
-      font-size: 13px;
+      font-size: $host-font-size-mobile;
     }
   }
 
   .apartment-detail .host-info .host-picture {
-    width: 40px;
-    height: 40px;
+    width: $host-picture-width-mobile;
+    height: $host-picture-width-mobile;
   }
 }

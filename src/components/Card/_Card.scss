@@ -1,27 +1,25 @@
 @import "../../Utils/_Responsive.scss";
+@import "../../Utils/mixins";
+@import "../../Utils/variables";
 
 .card-container {
   background-color: #F0F0F0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   width: 100%;
-  max-width: 88vw; 
-  gap: 70px;
+  max-width: $container-max-width;
+  gap: $card-gap;
   margin: 0 auto;
   position: relative;
-  padding-left: 80px;
-  padding-right: 50px; 
-  padding-bottom: 60px;
-  padding-top: 60px;
+  padding: $container-padding $container-padding-right $container-padding $container-padding-left;
   border-radius: 10px;
-  top: 80px;
+  top: $container-top;
 }
-
 
 .card {
   position: relative;
-  width: 90%;
-  height: 40vh;
+  width: $card-width;
+  height: $card-height;
   border: none;
   border-radius: 10px;
   overflow: hidden;
@@ -39,14 +37,14 @@
   align-items: center;
   width: 100%;
   height: 100%;
-  text-decoration: none; 
-  color: inherit; 
+  text-decoration: none;
+  color: inherit;
 }
 
 .card-cover {
   width: 100%;
-  height: 100%; 
-  object-fit: cover; 
+  height: 100%;
+  object-fit: cover;
   border-radius: 10px;
 }
 
@@ -57,55 +55,55 @@
   right: 0;
   padding: 10px;
   color: #fff;
- 
 }
 
 .Card-title {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  font-size: 18px;
+  font-size: $card-title-font-size;
   font-weight: bold;
 }
-
 
 @include desktop {
   .card-container {
     width: 100%;
-    max-width: 88vw;
-    gap: 50px;
+    max-width: $container-max-width;
+    gap: $card-gap-desktop;
+
     & .card {
-      width: 90%;
-      height: 30vh;
+      width: $card-width;
+      height: $card-height-desktop;
     }
 
     & .Card-content {
-      padding: 15px;
+      padding: $card-title-padding-desktop;
     }
 
     & .Card-title {
-      font-size: 14px;
+      font-size: $card-title-font-size-desktop;
     }
   }
 }
 
 @include tablet {
-
   .card-container {
-    display: flex;
-    flex-direction: column;
-    margin-top: -2em;
-    gap: 20px;
+    @include column;
+    margin-top: $tablet-margin-top;
+    gap: $card-gap-tablet;
+
     & .card {
-      margin-left: 1em;
-      width: 88%;
-      height: 60vh;
+      margin-left: $tablet-card-margin-left;
+      width: $container-max-width;
+      height: $card-height-tablet;
+
       & .Card-content {
-        padding: 40px;
-      & .Card-title {
-        font-size: 22px;
-        position: relative;
-        right: 10px;
-        top: 20px;
-      }
+        padding: $card-title-padding-tablet;
+
+        & .Card-title {
+          font-size: $card-title-font-size-tablet;
+          position: relative;
+          right: $tablet-card-title-right;
+          top: $tablet-card-title-top;
+        }
       }
     }
   }
@@ -114,14 +112,15 @@
 @include mobile {
   .card-container {
     & .card {
-      width: 95%;
-      height: 45vh;
-      margin-left: -0.2em;
+      width: 100%;
+      height: $card-height;
+      margin-left: $mobile-margin-left;
+
       & .Card-content {
         & .Card-title {
-        font-size: 13px;
-        position: relative;
-        right: 1.5em;
+          font-size: $card-title-font-size-mobile;
+          position: relative;
+          right: $mobile-card-title-right;
         }
       }
     }

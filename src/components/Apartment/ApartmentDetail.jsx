@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
 import data from "/src/data/Data.json";
 import Header from "../Header/Header.jsx";
 import Footer from "../Footer/Footer.jsx";
 import Carousel from "../Carousel/Carousel.jsx";
-import ToggleSection from "../ToggleSection/ToggleSection.jsx";
+import Collapse from "../ToggleSection/ToggleSection.jsx";
 import StarRating from "./Rating/Rating.jsx";
 import "./ApartmentDetail.scss";
 
@@ -16,7 +16,7 @@ function ApartmentDetail() {
   const [showEquipments, setShowEquipments] = useState(false);
 
   if (!apartment) {
-    return <p>Appartement non trouvé</p>;
+    return <Navigate to="/Error404" replace />;
   }
   return (
     <>
@@ -46,34 +46,29 @@ function ApartmentDetail() {
           </div>
         </div>
         <div className="layout-section">
-          <div className="toggle-wrapper">
-            <ToggleSection
-              className={`section ${
-                showDescription ? "expanded" : ""
-              }`}
-              title="Description"
-              content={<p>{apartment.description}</p>}
-              showContent={showDescription}
-              toggleContent={() => setShowDescription(!showDescription)}
-            />
-          </div>
-
-          <div className="toggle-wrapper">
-            <ToggleSection
-              className={`equipments-section ${
-                showEquipments ? "expanded" : ""
-              }`}
-              title="Equipments"
-              content={
-                <ul>
-                  {apartment.equipments.map((equipment, index) => (
-                    <li key={index}>{equipment}</li>
-                  ))}
-                </ul>
-              }
-              showContent={showEquipments}
-              toggleContent={() => setShowEquipments(!showEquipments)}
-            />
+        <div className="toggle-wrapper">
+          <Collapse
+            className="description-section"
+            title="Description"
+            content={<p>{apartment.description}</p>}
+            isOpen={showDescription} 
+            onToggle={() => setShowDescription(!showDescription)} // Fonction de toggle
+          />
+        </div>
+        <div className="toggle-wrapper">
+          <Collapse
+            className="equipments-section"
+            title="Equipments"
+            content={
+              <ul>
+                {apartment.equipments.map((equipment, index) => (
+                  <li key={index}>{equipment}</li>
+                ))}
+              </ul>
+            }
+            isOpen={showEquipments} 
+            onToggle={() => setShowEquipments(!showEquipments)} 
+          />
           </div>
         </div>
       </div>

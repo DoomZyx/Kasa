@@ -1,0 +1,70 @@
+/* Position */
+
+@mixin rowCenter {
+ display: flex;
+ justify-content: center;
+ flex-direction: row;
+}
+
+@mixin flex-JCenter {
+ display: flex;
+ justify-content: center;
+}
+
+@mixin align_all_on_center {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ text-align: center;
+}
+
+@mixin align_on_center {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+@mixin align_height_on_center {
+ display: flex;
+ align-items: center;
+}
+
+@mixin flex-start {
+ display: flex;
+ justify-content: flex-start;
+}
+
+@mixin flex-end-Hcenter-textEnd {
+ display: flex;
+ text-align: end;
+ align-items: center;
+}
+
+@mixin flex-end-Hcenter {
+ display: flex;
+ justify-content: flex-end;
+ align-items: center;
+}
+
+@mixin flex-end {
+ display: flex;
+ justify-content: flex-end;
+}
+
+@mixin column {
+ display: flex;
+ flex-direction: column;
+}
+
+@mixin columnCenter {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+}
+
+@mixin columnCenterStart {
+ display: flex;
+ justify-content: center;
+ flex-direction: column;
+ align-items: flex-start;
+}

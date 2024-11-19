@@ -1,10 +1,8 @@
 @import "../../Utils/responsive.scss";
+@import "../../Utils/mixins";
 
 .Footer {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
+  @include align_all_on_center;
   width: 100%;
   height: 25vh;
   margin-top: 120px;

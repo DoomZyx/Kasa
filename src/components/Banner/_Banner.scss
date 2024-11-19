@@ -1,94 +1,91 @@
 @import "../../Utils/responsive.scss";
+@import "../../Utils/mixins";
+@import "../../Utils/_variables.scss"; 
+
 
 .Banner-pos {
-  display: flex;
-  justify-content: center;
+  @include flex-JCenter;
   width: 100%;
 }
 
 .Banner {
+  @include align_all_on_center;
   background-image: url("../../assets/Banner.png");
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   background-color: rgba(0, 0, 0, 0.5);
   background-blend-mode: darken;
   background-size: cover;
   background-position: center;
-  border-radius: 10px;
-  height: 250px;
-  width: 88%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  border-radius: $radius;
   color: white;
-  text-align: center;
+  height: 250px; 
+  width: $banner-width;
 }
 
 .Banner-title {
-  font-size: 48px;
-  font-weight: 700;
+  font-size: $banner-title-font-size;
+  font-weight: $banner-title-weight;
   white-space: nowrap;
-}
 
-.Banner-title .responsive-break {
-  display: inline; 
+  .responsive-break {
+    display: inline;
+  }
 }
 
 .Banner-pos {
   @include desktop {
     justify-content: center;
-    width: 100%; 
-    margin: 0; 
+    width: 100%;
+    margin: 0;
   }
 }
 
 @include desktop {
   .Banner-pos {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%; 
-    margin-bottom: -3em;
+    @include align_on_center;
+    width: 100%;
+    margin-bottom: $banner-margin-bottom-desktop;
   }
 
   .Banner {
-    padding: 0; 
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    height: 32vh;
+    @include align_on_center;
+    padding: 0;
+    height: $banner-height-desktop;
   }
 
   .Banner-title {
-    width: 90%;
-    font-size: 40px; 
-    text-align: center; 
+    width: $banner-title-width-desktop;
+    font-size: $banner-title-font-size-desktop;
+    text-align: center;
   }
 }
 
 @include tablet {
-
   .Banner {
-    height: 20vh;
+    height: $banner-height-tablet;
   }
 
   .Banner-pos {
-    margin-top: -3em;
-  } 
-   .Banner-title {
+    margin-top: $banner-margin-top-tablet;
+  }
+
+  .Banner-title {
     white-space: normal;
     word-break: break-word;
     text-align: start;
-  }
-  .Banner-title .responsive-break {
-    display: block;
+
+    .responsive-break {
+      display: block;
+    }
   }
 }
 
 @include mobile {
   .Banner {
-    height: 15vh;
-      & .Banner-title {
-        font-size: 24px;
-      }
+    height: $banner-height-mobile;
+
+    & .Banner-title {
+      font-size: $banner-title-font-size-mobile;
+    }
   }
 }

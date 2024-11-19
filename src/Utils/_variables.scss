@@ -1,0 +1,161 @@
+
+//Couleur 
+
+$primary-color: #ff6060;
+
+// Dimensions
+$banner-height-desktop: 32vh;
+$banner-height-tablet: 20vh;
+$banner-height-mobile: 15vh;
+$banner-width: 88%;
+
+$container-max-width: 88vw;
+$card-width: 90%;
+$card-height: 40vh;
+$card-height-desktop: 30vh;
+$card-height-tablet: 60vh;
+$card-gap: 70px;
+$card-gap-desktop: 50px;
+$card-gap-tablet: 20px;
+
+$carousel-img-width: 89%;
+$carousel-img-height: 80vh;
+$carousel-img-height-desktop: 100vh;
+$carousel-img-height-tablet: 50vh;
+$carousel-img-height-mobile: 30vh;
+
+$host-picture-width: 100px;
+$host-picture-width-desktop: 9vw;
+$host-picture-width-tablet: 55px;
+$host-picture-width-mobile: 40px;
+$host-font-size: 18px;
+
+$section-width: 43vw;
+$section-width-desktop: 97%;
+$section-width-tablet: 95%;
+$section-width-mobile: 98%;
+$section-height-h2: 6vh;
+$section-height-mobile: 7vh;
+
+//arrondis
+$radius: 10px;
+
+// Marges et espacements
+$header-padding-bottom: 50px;
+$logo-margin-left: 100px;
+$logo-margin-top: 50px;
+$nav-gap: 57px;
+$mobile-nav-gap: 20px;
+
+
+$banner-margin-bottom-desktop: -3em;
+$banner-margin-top-tablet: -3em;
+$banner-title-width-desktop: 90%;
+
+$container-padding: 60px;
+$container-padding-left: 80px;
+$container-padding-right: 50px;
+$card-title-padding-desktop: 15px;
+$card-title-padding-tablet: 40px;
+
+$tag-padding: 5px 25px;
+$tag-padding-desktop: 3vw;
+$tag-padding-tablet: 2vw;
+$tag-padding-mobile: 1.3vw;
+
+$host-info-gap: 20px;
+$host-info-gap-desktop: 35px;
+$host-info-gap-tablet: 38px;
+
+$section-padding-h2: 25px;
+$section-padding-h2-mobile: 20px;
+$content-padding: 10px 50px 15px 15px;
+$content-padding-desktop: 10px;
+$content-padding-mobile: 10px;
+
+$section-margin-left: 1em;
+$layout-margin-top: 6vw;
+$layout-gap-tablet: 40px;
+
+$section-margin-left: 1em;
+$layout-margin-top: 6vw;
+$layout-gap-tablet: 40px;
+
+// Tailles des polices
+$nav-font-size: 24px;
+$tablet-nav-font-size: 18px;
+$mobile-nav-font-size: 15px;
+
+$banner-title-font-size: 48px;
+$banner-title-font-size-desktop: 40px;
+$banner-title-font-size-mobile: 24px;
+$banner-title-weight: 700;
+
+$card-title-font-size: 18px;
+$card-title-font-size-desktop: 14px;
+$card-title-font-size-tablet: 22px;
+$card-title-font-size-mobile: 13px;
+
+$apartment-title-font-size: 36px;
+$apartment-title-font-size-desktop: 30px;
+$apartment-title-font-size-mobile: 23px;
+
+$location-font-size: 17px;
+$location-font-size-desktop: 19px;
+$location-font-size-mobile: 15px;
+
+$tag-font-size-tablet: 12px;
+$tag-font-size-mobile: 10px;
+
+$host-font-size-tablet: 16px;
+$host-font-size-mobile: 13px;
+
+$star-font-size: 34px;
+$star-font-size-tablet: 30px;
+$star-font-size-mobile: 22px;
+
+$layout-margin-bottom: -120px;
+$layout-gap-desktop: 40px;
+$layout-gap-mobile: 20px;
+
+$section-font-weight: 700;
+$content-font-size-mobile: 12px;
+
+
+// Tailles du logo/icones
+$logo-width: 250px;
+$logo-height: 80px;
+$desktop-logo-width: 220px;
+$desktop-logo-height: 70px;
+
+$arrow-icon-width: 25px;
+$arrow-icon-margin-top-mobile: -0.4em;
+$arrow-icon-margin-right-mobile: -0.7em;
+
+// Positionnement
+$nav-right: 130px;
+$nav-top: 15px;
+
+$container-top: 80px;
+$tablet-margin-top: -2em;
+$tablet-card-margin-left: 1em;
+$mobile-margin-left: -0.2em;
+
+// Responsive breakpoints
+$mobile-logo-width: 35vw;
+$mobile-logo-height: 10vh;
+$mobile-nav-left: -1.2em;
+$tablet-logo-width: 25vw;
+
+$tablet-card-title-right: 10px;
+$tablet-card-title-top: 20px;
+$mobile-card-title-right: 1.5em;
+
+$host-info-top-desktop: 3vw;
+$host-info-left-desktop: -5vw;
+$rating-top-desktop: -2em;
+
+// Transitions
+$content-max-height: 500px;
+$content-transition: max-height 0.9s ease-in-out;
+$arrow-transition: transform 0.3s ease-in-out;

@@ -1,21 +1,15 @@
+import React from "react";
 import "../ToggleSection/_ToggleSection.scss";
 
-const ToggleSection = ({
-  className,
-  title,
-  content,
-  showContent,
-  toggleContent,
-}) => {
+const Collapse = ({ className, title, content, isOpen, onToggle }) => {
   return (
-    <div className={`section ${className}`} onClick={toggleContent}>
-      <h2>
+    <div className={`section ${className} ${isOpen ? "expanded" : ""}`}>
+      <h2 onClick={onToggle}>
         {title}
-        {/* Ajout de la flèche dynamique */}
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 512 512"
-          className={`arrow-icon ${showContent ? "up" : "down"}`}
+          className={`arrow-icon ${isOpen ? "up" : "down"}`}
         >
           <path
             fill="#ffff"
@@ -23,9 +17,9 @@ const ToggleSection = ({
           />
         </svg>
       </h2>
-      {showContent && <div className="content">{content}</div>}
+      {isOpen && <div className="content">{content}</div>}
     </div>
   );
 };
 
-export default ToggleSection;
+export default Collapse;

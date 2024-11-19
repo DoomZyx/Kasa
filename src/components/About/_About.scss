@@ -1,109 +1,25 @@
 @import "../../Utils/responsive";
+@import "../../Utils/mixins";
 
 .sections-list {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  @include columnCenter;
   align-self: center;
   align-items: center;
   margin: 5em;
   gap: 30px;
 }
-
 .sections {
-  border-radius: 10px;
-  margin-bottom: 1em;
-  padding: 1em;
-  cursor: pointer;
-  color: white;
-  transition: all 0.3s ease-in-out;
-  background-color: #ff6060;
-  width: 75vw;
+  width: 70vw;
 }
-
-.sections-list  h2 {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-weight: 700;
-  font-size: 24px;
-}
-
-.sections-list .arrow {
-  transition: transform 0.3s ease-in-out;
-}
-.sections-list svg {
-  width: 24px;
-}
-
-.sections-list .arrow.up {
-  transform: rotate(-180deg);
-}
-
-.sections-list .arrow.down {
-  transform: rotate(0deg);
-}
-
-.sections-list .content {
-  background-color: #f0f0f0;
-  color: black;
-  margin-top: 0.5em;
-  padding: 1em;
-  width: 75vw;
-  height: 15vh;
-  position: relative;
-  top: 1em;
-  right: 1em;
-}
-
-.content p {
-  margin-top: 1em;
-}
-
 @include mobile {
 
   .sections-list {
-    display: flex;
+    @include align_height_on_center;
     align-self: center;
-    align-items: center;
     margin-top: 2em;
     margin-bottom: -5em; 
     gap: 15px; 
   }
-
-  .sections {
-    margin-bottom: 1em;
-    padding: 0.5em; 
-    cursor: pointer;
-    color: white;
-    width: 85vw; 
-    height: auto; 
-  }
-
-  .sections-list h2 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-weight: 700;
-    font-size: 16px; 
-  }
-
-  .sections-list svg {
-    width: 18px; 
-  }
-
-  .sections-list .content {
-    background-color: white;
-    color: black;
-    margin-top: 0.5em;
-    padding: 0.5em; 
-    width: 85vw; 
-    height: auto;
-    position: relative;
-    top: 1em;
-    right: 0.5em;
-  }
-
 }
 
 

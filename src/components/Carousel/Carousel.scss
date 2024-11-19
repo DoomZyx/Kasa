@@ -1,18 +1,16 @@
 @import "../../Utils/responsive.scss";
+@import "../../Utils/mixins";
 
 .carousel {
-  display: flex;
-  align-items: center;
+  @include align_height_on_center;
   position: relative;
   width: 100%; 
   position: relative;
 }
 
 .carousel-image-container {
+  @include align_on_center;
   flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   overflow: hidden;
 }
 
