@@ -266,7 +266,10 @@ body {
   gap: 70px;
   margin: 0 auto;
   position: relative;
-  padding: 60px 50px 60px 80px;
+  padding-left: 80px;
+  padding-right: 50px;
+  padding-bottom: 60px;
+  padding-top: 60px;
   border-radius: 10px;
   top: 80px;
 }
@@ -344,7 +347,7 @@ body {
   }
   .card-container .card {
     margin-left: 1em;
-    width: 88vw;
+    width: 88%;
     height: 60vh;
   }
   .card-container .card .Card-content {

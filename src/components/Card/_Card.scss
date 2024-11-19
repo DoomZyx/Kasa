@@ -7,19 +7,23 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   width: 100%;
-  max-width: $container-max-width;
-  gap: $card-gap;
+  max-width: 88vw; 
+  gap: 70px;
   margin: 0 auto;
   position: relative;
-  padding: $container-padding $container-padding-right $container-padding $container-padding-left;
+  padding-left: 80px;
+  padding-right: 50px; 
+  padding-bottom: 60px;
+  padding-top: 60px;
   border-radius: 10px;
-  top: $container-top;
+  top: 80px;
 }
+
 
 .card {
   position: relative;
-  width: $card-width;
-  height: $card-height;
+  width: 90%;
+  height: 40vh;
   border: none;
   border-radius: 10px;
   overflow: hidden;
@@ -37,14 +41,14 @@
   align-items: center;
   width: 100%;
   height: 100%;
-  text-decoration: none;
-  color: inherit;
+  text-decoration: none; 
+  color: inherit; 
 }
 
 .card-cover {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: 100%; 
+  object-fit: cover; 
   border-radius: 10px;
 }
 
@@ -55,55 +59,54 @@
   right: 0;
   padding: 10px;
   color: #fff;
+ 
 }
 
 .Card-title {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  font-size: $card-title-font-size;
+  font-size: 18px;
   font-weight: bold;
 }
+
 
 @include desktop {
   .card-container {
     width: 100%;
-    max-width: $container-max-width;
-    gap: $card-gap-desktop;
-
+    max-width: 88vw;
+    gap: 50px;
     & .card {
-      width: $card-width;
-      height: $card-height-desktop;
+      width: 90%;
+      height: 30vh;
     }
 
     & .Card-content {
-      padding: $card-title-padding-desktop;
+      padding: 15px;
     }
 
     & .Card-title {
-      font-size: $card-title-font-size-desktop;
+      font-size: 14px;
     }
   }
 }
 
 @include tablet {
+
   .card-container {
     @include column;
-    margin-top: $tablet-margin-top;
-    gap: $card-gap-tablet;
-
+    margin-top: -2em;
+    gap: 20px;
     & .card {
-      margin-left: $tablet-card-margin-left;
-      width: $container-max-width;
-      height: $card-height-tablet;
-
+      margin-left: 1em;
+      width: 88%;
+      height: 60vh;
       & .Card-content {
-        padding: $card-title-padding-tablet;
-
-        & .Card-title {
-          font-size: $card-title-font-size-tablet;
-          position: relative;
-          right: $tablet-card-title-right;
-          top: $tablet-card-title-top;
-        }
+        padding: 40px;
+      & .Card-title {
+        font-size: 22px;
+        position: relative;
+        right: 10px;
+        top: 20px;
+      }
       }
     }
   }
@@ -113,14 +116,13 @@
   .card-container {
     & .card {
       width: 100%;
-      height: $card-height;
-      margin-left: $mobile-margin-left;
-
+      height: 40vh;
+      margin-left: -0.2em;
       & .Card-content {
         & .Card-title {
-          font-size: $card-title-font-size-mobile;
-          position: relative;
-          right: $mobile-card-title-right;
+        font-size: 13px;
+        position: relative;
+        right: 1.5em;
         }
       }
     }
