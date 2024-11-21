@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import data from "../../data/Data.json";
 import Header from "../../components/Header/Header.jsx";
 import Banner from "../../components/Banner/Banner.jsx";

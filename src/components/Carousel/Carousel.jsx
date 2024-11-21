@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "./Carousel.scss"; 
 
-
+// Fonction fléchée qui prend en compte la props image qui contient un tableau avec les URLs 
 const Carousel = ({ images }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0); 
   
-  // Charge l'image suivante 
+  // Charge l'image suivante pour éviter les délais de chargement 
   useEffect(() => {
     const preloadImage = new Image();
     preloadImage.src = images[(currentIndex + 1) % images.length];
