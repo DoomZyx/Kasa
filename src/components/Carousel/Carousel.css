@@ -4,7 +4,6 @@
   align-items: center;
   position: relative;
   width: 100%;
-  position: relative;
 }
 
 .carousel-image-container {
@@ -52,9 +51,8 @@
 .Counter {
   position: absolute;
   bottom: 30px;
-  right: 915px;
+  right: 47%;
   color: #ffffff;
-  padding: 5px 10px;
   border-radius: 5px;
   font-size: 18px;
   font-weight: 500;

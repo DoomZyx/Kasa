@@ -13,6 +13,18 @@
 }
 @include mobile {
 
+  .sections {
+    width: 84vw;
+    margin-right: 1em;
+    & h2 {
+      padding: 20px;
+    }
+  }
+
+  .sections .arrow-icon {
+    margin-top: -5px
+  }
+
   .sections-list {
     @include align_height_on_center;
     align-self: center;

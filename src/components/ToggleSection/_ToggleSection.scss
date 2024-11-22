@@ -83,21 +83,18 @@
 
 @include mobile {
   .section {
-    width: $section-width-mobile;
-    height: $section-height-mobile;
+    width: 98%;
   }
-
   .toggle-wrapper h2 {
-    padding: $section-padding-h2-mobile;
+   padding: 20px;
   }
-
-  .section .arrow-icon {
-    margin-top: $arrow-icon-margin-top-mobile;
-    margin-right: $arrow-icon-margin-right-mobile;
+  .toggle-wrapper .section .arrow-icon {
+   font-size: 13px;
+   margin-top: -0.5em;
+   margin-right: -0.7em;
   }
-
   .content p {
-    font-size: $content-font-size-mobile;
-    padding: $content-padding-mobile;
+   font-size: 12px;
+   padding: 10px;
   }
-}
+  }
