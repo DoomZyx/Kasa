@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+KASA 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![image](https://github.com/user-attachments/assets/6784bb42-39a0-4cca-b855-70e58a21f57f)
 
-## Available Scripts
+ENGLISH 
+________________________________________________________________________________________________________________________________________________________________
 
-In the project directory, you can run:
 
-### `npm start`
+I'm a freelance front-end developer working for Kasa, a peer-to-peer apartment rental company.
+Kasa's website was developed over 10 years ago in ASP.NET and now has a significant amount of legacy code. Laura, the CTO, has initiated a complete redesign to transition to a full JavaScript stack with NodeJS for the back-end and React for the front-end.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Mission 🎯
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Your mission is to develop Kasa's interface using React and following the Figma design. The tasks include:
 
-### `npm test`
+- Initializing the React Router app and creating routes for the different pages (Home, Listings, About).
+- Creating components to organize the project and allow reusability.
+- Developing the homepage to showcase apartment listings.
+- Creating the property page using JSON data from the listings.
+- Building a carousel for the property page.
+- Creating collapses to display the features of each apartment.
+- Developing the "About" page.
+- Implementing a 404 error page to display when a user enters an incorrect URL or the property URL doesn't exist.
+- Developing the responsive version of the website.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+FRANCAIS
+___________________________________________________________________________________________________________________________________________________________________
 
-### `npm run build`
+Je suis développeur front-end en freelance pour Kasa, une entreprise de location d’appartements entre particuliers.
+Le site de Kasa a été codé il y a maintenant plus de 10 ans en ASP.NET avec un code legacy important. Laura, la CTO, a donc lancé une refonte totale pour passer à une stack complète en JavaScript avec NodeJS côté back-end, et React côté front-end.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Mission 🎯
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Votre mission est de développer l'interface de Kasa grâce à React et en suivant la maquette Figma, Il faudra : 
+- Initialiser React Router App et créer les routes pour les différentes pages (Accueil, Annonces, A Propos)
+_ Créer des composants pour pouvoir organiser le projet et en réutiliser 
+- Créer la page d'accueil qui présentera les annonces d'appartements 
+- Créer la page de logement en prenant en compte les données JSON des annonces
+- Créer le carrousel de la page de logement 
+- Créer les collapses qui contiendront les caractéristiques de chaque appartements
+- Créer la page à propos 
+- Créer une page d'erreur 404 qui s'affichera si l'utilisateur utilise une mauvaise URL ou que l'URL de l'appartement n'existe pas
+- Développer la version responsive du site 
