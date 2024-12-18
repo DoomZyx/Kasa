@@ -3,7 +3,8 @@ import "../ToggleSection/_ToggleSection.scss";
 
 const Collapse = ({ className, title, content, isOpen, onToggle }) => {
   return (
-    <div className={`section ${className} ${isOpen ? "expanded" : ""}`}>
+    //Classe expanded ajouté si IsOpen est vrai 
+    <div className={`section ${className} ${isOpen ? "expanded" : ""}`}> 
       <h2 onClick={onToggle}>
         {title}
         <svg
