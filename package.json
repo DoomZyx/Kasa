@@ -1,7 +1,7 @@
 {
   "name": "kasa",
   "version": "1.0.0",
-  "homepage": "https://DoomZyx.github.io/Kasa",
+  "homepage": "https://doomzyx.github.io/Kasa",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
