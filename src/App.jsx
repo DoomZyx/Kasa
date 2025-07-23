@@ -14,7 +14,7 @@ import Error404 from "./pages/ERR404/Error404";
 
 function App() {
   return (
-    <Router basename="/Kasa">
+    <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/apartment/:id" element={<ApartmentDetail />} />
